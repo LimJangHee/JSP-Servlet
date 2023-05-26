@@ -11,6 +11,7 @@
     if (inputId.equals(registeredId) && inputPassword.equals(registeredPassword)) {
         // 3. 등록되어 있는 경우 main.jsp로 이동
         HttpSession loginSession = request.getSession();
+        // userId 값으로 inputId값을 설정
         loginSession.setAttribute("userId", inputId);
         response.sendRedirect("main.jsp");
     } else {

@@ -4,6 +4,7 @@
     HttpSession currentSession = request.getSession(false);
     String userId = null;
     if (currentSession != null && currentSession.getAttribute("userId") != null) {
+    	// 세션의 id속성값을 가져와서 변수에 저장 -> 이렇게 해줘야 다른데서 사용하고 싶을때 사용할 수 있음
         userId = (String) currentSession.getAttribute("userId");
     } else {
         response.sendRedirect("login.jsp");
@@ -25,7 +26,9 @@
 </body>
 </html>
 <%
+	// 로그아웃 submit을 해주면 name="logout" value="true" 값을 넣어줌
     // 로그아웃 처리
+    // value값은 true를 저장
     String logoutValue = request.getParameter("logout");
     if (logoutValue != null && logoutValue.equals("true")) {
         // 세션 무효화
