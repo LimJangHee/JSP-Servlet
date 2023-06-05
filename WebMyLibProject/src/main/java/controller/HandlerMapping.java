@@ -3,7 +3,10 @@ package controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import controller.book.AddBookController;
+import controller.book.DeleteBookController;
 import controller.book.GetBookListController;
+import controller.book.SearchBookController;
 import controller.homepage.HomepageController;
 import controller.user.InsertUserController;
 import controller.user.LoginController;
@@ -19,6 +22,9 @@ public class HandlerMapping {
 			mappings.put("/login.do", new LoginController());
 			mappings.put("/logout.do", new LogoutController());
 			mappings.put("/getBookList.do", new GetBookListController());
+			mappings.put("/addBook.do", new AddBookController());
+			mappings.put("/deleteBook.do", new DeleteBookController());
+			mappings.put("/searchBook.do", new SearchBookController());
 		}
 		public Controller getController(String path) {
 			return mappings.get(path);

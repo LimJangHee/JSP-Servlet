@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>회원가입</title>
+<title>도서삭제</title>
 </head>
 <body>
 <style>
@@ -52,42 +52,15 @@
 </style>
 </head>
 <body>
-	<h1>회원가입</h1>
+	<h1>도서삭제</h1>
 	<div class="form-container">
-	    <form action="insertUser.do" method="post">
+	    <form action="deleteBook.do" method="post">
     		<div>
-    			<label for="id">아이디</label>
-    			<input type="text" id="id" name="id" />
-    		</div>
-    		<div>
-    			<label for="password">비밀번호</label>
-    			<input type="password" id="password" name="password" />
-    		</div>
-    		<div>
-    			<label for="name">이름</label>
+    			<label for="name">도서명</label>
     			<input type="text" id="name" name="name" />
     		</div>
     		<div>
-    			<label for="birth">생년월일</label>
-    			<input type="date" id="birth" name="birth" />
-    		</div>
-    		<div>
-    			<label for="email">Email</label>
-    			<input type="email" id="email" name="email" />
-    		</div>
-    		<div>
-    			<label for="phone">휴대폰번호</label>
-    			<input type="number" id="phone" name="phone" />
-    		</div>
-    		<div>
-    			<label>권한</label>
-    			<input type="radio" id="admin" name="role" value="admin" checked="checked" />
-    			<label for="admin">관리자</label>
-    			<input type="radio" id="user" name="role" value="User" />
-    			<label for="user">사용자</label>
-    		</div>
-    		<div>
-    			<input type="submit" value="회원가입" />
+    			<input type="submit" value="도서삭제" />
     		</div>
 	    </form>
 	</div>

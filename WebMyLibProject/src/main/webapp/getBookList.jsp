@@ -9,8 +9,8 @@
 </head>
 <header>
 	전체도서검색
-	<h3>${ user.name }님 환영합니다.</h3>
-	<hr/>
+	<h3>${ user.name }님환영합니다.</h3>
+	<hr />
 </header>
 <body>
 	<section>
@@ -21,6 +21,7 @@
 				<td>WRITER</td>
 				<td>PUBLISHER</td>
 				<td>RECEIVE</td>
+				<td>RENTABLE</td>
 			</tr>
 			<c:forEach var="book" items="${ bookList }">
 				<tr>
@@ -29,9 +30,17 @@
 					<td>${ book.writer }</td>
 					<td>${ book.publisher }</td>
 					<td>${ book.receive }</td>
+					<td><c:if test="${book.rentable}">
+                대출 가능
+            </c:if> <c:if test="${!book.rentable}">
+                대출 불가능
+            </c:if></td>
 				</tr>
 			</c:forEach>
 		</table>
 	</section>
+	<div class="link">
+		<a href="/WebMyLibProject/homepage.jsp">돌아가기</a>
+	</div>
 </body>
 </html>

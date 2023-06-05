@@ -24,8 +24,8 @@
 <body>
 <section>
 	<c:if test="${ user.role == 'admin' }">
-		<a href="/WebMyLibProject/addBook.do">책입고</a>
-		<a href="/WebMyLibProject/DeleteBook.do">책삭제</a>
+		<a href="/WebMyLibProject/addBook.jsp">책입고</a>
+		<a href="/WebMyLibProject/deleteBook.jsp">책삭제</a>
 	</c:if>
 	<c:choose>
 		<c:when test="${ empty user }">
@@ -34,7 +34,8 @@
 		</c:when>
 		<c:otherwise>
 			${ user.name }님
-			<a href="/WebMyLibProject/getBookList.do">전체도서검색</a>
+			<a href="/WebMyLibProject/getBookList.do">전체도서목록</a>
+			<a href="/WebMyLibProject/searchBook.do">도서검색</a>
 			<a href="/WebMyLibProject/logout.do">로그아웃</a>			 
 		</c:otherwise>
 	</c:choose>

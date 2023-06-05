@@ -9,7 +9,14 @@ public class BookVO {
 	String writer;
 	String publisher;
 	Date receive;
+	Boolean rentable;
 	
+	public Boolean getRentable() {
+		return rentable;
+	}
+	public void setRentable(Boolean rentable) {
+		this.rentable = rentable;
+	}
 	public Date getReceive() {
 		return receive;
 	}
